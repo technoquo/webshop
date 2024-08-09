@@ -14,7 +14,8 @@ class Cart extends Component
 {
     use InteractsWithBanner;
    
-    public function getCartProperty()
+    #[Computed]
+    public function cart()
     {
         return CartFactory::make()->loadMissing(['items','items.product','items.variant']);
     }

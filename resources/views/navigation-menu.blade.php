@@ -12,7 +12,7 @@
                
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
+                    <x-nav-link wire:navigate href="{{ route('home') }}" :active="request()->routeIs('home')">
                         {{ __('Inicio') }}
                     </x-nav-link>
 
@@ -102,7 +102,7 @@
                                 {{ __('Manage Account') }}
                             </div>
 
-                            <x-dropdown-link href="{{ route('profile.show') }}">
+                            <x-dropdown-link wire:navigate href="{{ route('profile.show') }}">
                                 {{ __('Profile') }}
                             </x-dropdown-link>
 
